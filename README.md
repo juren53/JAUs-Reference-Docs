@@ -6,6 +6,7 @@ Shared reference documents for all of my projects, especially the PyQt GUI appli
 
 | Document | Description |
 |----------|-------------|
+| [Specifications-Standards-and-Products.md](Specifications-Standards-and-Products.md) | Definitions and comparisons of **specifications**, **standards**, and **products**, with supporting frameworks (systems engineering, ISO/IEC Directives, SEI) |
 | [Application-UI-Standards-and-Specs.md](Application-UI-Standards-and-Specs.md) | Desktop application menu, dialog, and keyboard conventions: ISO/ANSI/IEEE **standards** and the IBM CUA and platform **specifications** |
 
 ## Terminology
