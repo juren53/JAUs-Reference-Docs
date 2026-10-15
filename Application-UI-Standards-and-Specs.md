@@ -7,12 +7,14 @@ Reference notes on the formal **standards** and company **specifications** that 
 - Terminology: Standards vs. Specifications
 - **Part A — Standards**
   1. ISO Standards for Pull-Down Menus & GUIs
-  2. ANSI and IEEE
+  2. ANSI and IEEE (including the IEEE P1201 effort)
 - **Part B — Specifications**
   3. IBM Common User Access (CUA)
-  4. Current Platform Specifications
+  4. The Unix "GUI Wars": OPEN LOOK, Motif, and CDE
+  5. Current Platform Specifications
 - **Part C — Comparison**
-  5. How the Standards and Specifications Relate
+  6. How the Standards and Specifications Relate
+- References to Verify
 
 ---
 
@@ -49,6 +51,8 @@ This is the primary formal standard for menu systems. It explicitly defined reco
 
 - **Keyboard Navigation:** Requirements for mnemonics (underlined hotkeys), keyboard shortcuts, and access paths.
 
+**How UI standards work moved to ISO:** In the late 1980s and early 1990s, IEEE tried to write a UI standard for Unix desktops (P1201, see §2.2). Rival vendors pulled in different directions, and the effort stalled. Much of the consensus-backed menu and UI work then took place at ISO instead. ISO 9241-14 formally codified the menu bars, pull-down layouts, and keyboard access conventions that company specifications such as IBM CUA (§3) had made common during the late 1980s.
+
 ### 1.2 ISO/IEC 15910 & ISO/IEC 11581 Series
 
 - **ISO/IEC 15910 (*Information technology — Software user documentation process*):** Covers the process for producing user documentation (help, manuals) that accompanies an interface.
@@ -61,9 +65,34 @@ As part of the restructured ISO 9241 series, **Part 161** specifically details v
 
 ## 2. ANSI and IEEE
 
-- **ANSI:** Rather than creating a competing standard, ANSI adopted ISO 9241 in the United States via **ANSI/HFES 200** (*Human Factors Engineering of Software User Interfaces*), which incorporated ISO's menu dialogue requirements for American software development.
+### 2.1 ANSI
 
-- **IEEE:** IEEE primarily focused on lower-level POSIX standard interfaces and software engineering documentation standards, though IEEE working groups routinely referenced ISO 9241 for software human-factors compliance.
+Rather than creating a competing standard, ANSI adopted ISO 9241 in the United States via **ANSI/HFES 200** (*Human Factors Engineering of Software User Interfaces*), which incorporated ISO's menu dialogue requirements for American software development.
+
+### 2.2 IEEE
+
+IEEE's standards work in this area has mostly been on lower-level POSIX interfaces and software engineering documentation. IEEE working groups often refer to ISO 9241 for software human factors. IEEE did make one direct attempt at a UI standard during the late 1980s and early 1990s, when Unix vendors were fighting over desktop look and feel (see §4).
+
+#### IEEE P1201: the attempted Unix GUI standard
+
+The **IEEE P1201** working groups were sponsored by the same IEEE Computer Society committee as POSIX (IEEE 1003). Their goal was official, vendor-neutral standards for Unix windowing and GUI behavior.
+
+> **Terminology note:** The "P" in P1201 means *project*. It marks a draft that has **not** been approved as an IEEE standard. Also, IEEE publishes three kinds of documents: *Standards* (mandatory requirements, "shall"), *Recommended Practices* (preferred procedures, "should"), and *Guides* (alternatives, "may"). P1201.2 was aimed at a Recommended Practice, not a Standard.
+
+| Project | Title / Aim |
+|---------|-------------|
+| **P1201.1** | A windowing toolkit API meant to bridge the competing Unix toolkits, OSF/Motif and Sun/AT&T OPEN LOOK, so applications could be written once for either look and feel |
+| **P1201.2** | *Recommended Practice for Graphical User Interface Drivability*: common interaction behavior, so that users' skills carry over between GUIs. Covers mouse buttons, keyboard mnemonics, menu structures, and accelerator keys |
+
+**Outcome:** Commercial rivalry between the Motif and OPEN LOOK camps stalled P1201 in the early-to-mid 1990s. The Unix vendors then settled the question by agreement among themselves: in 1993 they formed the **Common Desktop Environment (CDE)** alliance, built on Motif. That result was a **specification** created by an industry group, not a consensus IEEE standard (see §4.3).
+
+#### IEEE Software magazine: commentary, not standards
+
+During the same period, *IEEE Software* and other IEEE Computer Society publications ran articles on UI tools and the competing style guides. These are **published literature**, not standards: they analyze and compare, but they set no requirements.
+
+- **Myers, Brad A.** "User-Interface Tools: Introduction and Survey." *IEEE Software* 6(1), January 1989, pp. 15–23. This influential survey sorted the emerging tools into user interface management systems (UIMS), toolkit libraries, and related categories. It describes how standard widget toolkits (menus, scroll bars, dialogs) were taking over application development on PCs and Unix.
+- **Ben Shneiderman** wrote widely in this period about how corporate GUI specifications such as IBM CUA match up with how users think. One of his themes was how CUA's consistent action-bar/pull-down structure gave users predictable menus from one application to the next.
+- **Comparisons of style guides:** *IEEE Software* articles in the late 1980s and early 1990s compared the leading specifications: IBM CUA, OSF/Motif, OPEN LOOK, and Apple's Human Interface Guidelines. A recurring debate was whether formal standardization would hold back UI innovation or was needed to prevent fragmentation.
 
 ---
 
@@ -145,7 +174,23 @@ CUA defined levels of capability so that the same principles could apply on very
 - Many CUA concepts, including action bars, pull-downs, mnemonics, and grayed-out choices, later appear in the formal standard **ISO 9241-14**. This is the normal path: ideas proven in a company spec are later formalized by a standards body.
 - Modern toolkits (**Qt/PyQt**, **GTK**, **WinForms/WPF**) still follow CUA conventions by default: `&File` mnemonics, `...` on dialog-opening items, File-first/Help-last menu order, F1 for help.
 
-## 4. Current Platform Specifications
+## 4. The Unix "GUI Wars": OPEN LOOK, Motif, and CDE
+
+In the late 1980s and early 1990s, Unix vendors fought over the look and feel of the X11 desktop. This is sometimes called the "GUI Wars," part of the broader "Unix wars." Every contender was a **specification** owned by a company or vendor consortium. That is why IEEE P1201 (§2.2) tried to create a neutral **standard** above them.
+
+### 4.1 OPEN LOOK (Sun Microsystems and AT&T, 1988)
+
+A look-and-feel specification, published as the *OPEN LOOK Graphical User Interface Functional Specification*. It was designed as an alternative to the CUA-style conventions and was implemented in Sun's OpenWindows desktop.
+
+### 4.2 OSF/Motif (Open Software Foundation, 1989)
+
+A toolkit and **style guide specification** from the Open Software Foundation, a vendor consortium formed largely by OPEN LOOK's rivals (including IBM, DEC, and HP). Motif followed IBM CUA and Microsoft Windows conventions closely, so Unix applications felt familiar to PC users (see §3.5).
+
+### 4.3 Common Desktop Environment (CDE, 1993)
+
+The vendors ended the fight with an agreement, not a standard. HP, IBM, Sun, and Novell/USL formed the **COSE** (Common Open Software Environment) alliance and produced **CDE**, a common desktop built on Motif. Sun then dropped OPEN LOOK. CDE was later maintained by The Open Group (an industry consortium), so it remains a **specification**.
+
+## 5. Current Platform Specifications
 
 These are the working references for desktop UI today. All of them are **specifications**, maintained by the company or project that owns the platform, not by a standards body:
 
@@ -160,7 +205,7 @@ These are the working references for desktop UI today. All of them are **specifi
 
 # Part C — Comparison
 
-## 5. How the Standards and Specifications Relate
+## 6. How the Standards and Specifications Relate
 
 | Document | Kind | Issued by | Scope | Status |
 |----------|------|-----------|-------|--------|
@@ -168,8 +213,25 @@ These are the working references for desktop UI today. All of them are **specifi
 | ISO 9241-161 | **Standard** | ISO | Visual UI elements (menus, dialogs, controls) | Current part of the restructured 9241 series |
 | ISO/IEC 11581 | **Standard** | ISO/IEC | UI icons and symbols | Current |
 | ANSI/HFES 200 | **Standard** | ANSI (developed by HFES) | U.S. adoption of ISO 9241 software ergonomics | Current |
+| IEEE P1201.1 / P1201.2 | **Draft standard project** (never completed as a standard) | IEEE | Unix windowing toolkit API; GUI drivability | Stalled in the 1990s |
 | IBM CUA (1987–1992) | **Specification** | IBM | Full interaction model: menus, keyboard, dialogs, messages | Historical; conventions live on in modern toolkits |
+| OPEN LOOK (1988) | **Specification** | Sun Microsystems and AT&T | X11/Unix desktop look and feel | Historical; dropped in favor of CDE |
 | OSF/Motif Style Guide | **Specification** | Open Software Foundation | X11/Unix desktop UI, based on CUA | Historical |
+| CDE (1993) | **Specification** | COSE vendor alliance; later The Open Group | Common Unix desktop built on Motif | Historical |
 | Windows, Apple, GNOME, KDE guidelines | **Specification** | Microsoft, Apple, GNOME, KDE | Their own platforms | Current |
 
-**In practice:** IBM's CUA specification came first and set the conventions. ISO 9241 later formalized many of them as an international standard. Today's working references are the platform specifications from Microsoft, Apple, GNOME, and KDE, and all of them still reflect CUA ideas. When this document says an application "follows the standard," it means ISO 9241. When an application follows Windows or CUA conventions, it is following a **specification**.
+**In practice:** IBM's CUA specification came first and set the conventions. IEEE's attempt at a Unix GUI standard (P1201) was overtaken by rivalry among vendors, who settled on their own CDE specification. ISO 9241 later formalized many of the CUA conventions as an international standard. Today's working references are the platform specifications from Microsoft, Apple, GNOME, and KDE, and all of them still reflect CUA ideas. When this document says an application "follows the standard," it means ISO 9241. When an application follows Windows or CUA conventions, it is following a **specification**.
+
+---
+
+## References to Verify
+
+These items were written from secondary summaries and memory. Check them against primary sources before citing them:
+
+- **IEEE P1201.1 / P1201.2:** exact official titles, scope, sponsoring committee, and final status. Check whether either was ever approved, withdrawn, or administratively closed.
+- **Ben Shneiderman:** the specific IEEE publications and years in which he discussed IBM CUA.
+- **IEEE Software issues on user interfaces** (cited as 1989, 1990, 1993): exact issues and article titles.
+- **IBM CUA publication numbers** (SC26-4351, SC26-4583, SC26-4582, SC34-4399).
+- **OPEN LOOK, Motif, and CDE dates** and the list of COSE member companies.
+
+Verified: Myers, B. A., "User-Interface Tools: Introduction and Survey," *IEEE Software* 6(1):15–23, Jan. 1989.
