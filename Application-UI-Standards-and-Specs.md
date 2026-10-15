@@ -234,4 +234,4 @@ These items were written from secondary summaries and memory. Check them against
 - **IBM CUA publication numbers** (SC26-4351, SC26-4583, SC26-4582, SC34-4399).
 - **OPEN LOOK, Motif, and CDE dates** and the list of COSE member companies.
 
-Verified: Myers, B. A., "User-Interface Tools: Introduction and Survey," *IEEE Software* 6(1):15–23, Jan. 1989.
+- **Myers (1989) citation details:** volume, issue, and page numbers. This is a well-known paper, but the citation was not checked against IEEE Xplore.
