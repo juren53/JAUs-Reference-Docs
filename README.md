@@ -7,6 +7,7 @@ Shared reference documents for all of my projects, especially the PyQt GUI appli
 | Document | Description |
 |----------|-------------|
 | [Specifications-Standards-and-Products.md](Specifications-Standards-and-Products.md) | Definitions and comparisons of **specifications**, **standards**, and **products**, with supporting frameworks (systems engineering, ISO/IEC Directives, SEI) |
+| [GUI-Standards-Battles.md](GUI-Standards-Battles.md) | History of the 1980s–1990s GUI standards battles (IBM CUA, OPEN LOOK vs. Motif, IEEE P1201, CDE, ISO 9241-14), with references, timeline, and conclusions |
 | [Application-UI-Standards-and-Specs.md](Application-UI-Standards-and-Specs.md) | Desktop application menu, dialog, and keyboard conventions: ISO/ANSI/IEEE **standards** and the IBM CUA and platform **specifications** |
 
 ## Terminology
