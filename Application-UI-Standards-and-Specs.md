@@ -1,5 +1,7 @@
 # Application UI Standards and Specifications
 
+**Date:** 2026-10-15 1624 CDT
+
 Reference notes on the formal **standards** and company **specifications** that define how desktop application menus, dialogs, and keyboard interaction should behave.
 
 ## Contents
@@ -235,3 +237,7 @@ These items were written from secondary summaries and memory. Check them against
 - **OPEN LOOK, Motif, and CDE dates** and the list of COSE member companies.
 
 - **Myers (1989) citation details:** volume, issue, and page numbers. This is a well-known paper, but the citation was not checked against IEEE Xplore.
+
+---
+
+**Last Updated:** 2026-10-15 1642 CDT

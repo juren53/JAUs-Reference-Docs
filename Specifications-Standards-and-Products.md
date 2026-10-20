@@ -1,5 +1,7 @@
 # Specifications, Standards, and Products
 
+**Date:** 2026-10-15 1630 CDT
+
 Definitions and comparisons for three terms that are often confused: **specification**, **standard**, and **product**. These definitions are used throughout JAUs-Reference-Docs. For an applied example, see [Application-UI-Standards-and-Specs.md](Application-UI-Standards-and-Specs.md).
 
 ## Contents
@@ -84,3 +86,7 @@ Applying these definitions to the desktop pull-down menu shows how the three lev
 The order matters: the specification came first (1987), the standard formalized many of the same ideas a decade later (1997), and products implemented the conventions throughout. Products followed CUA long before ISO 9241-14 existed, so for that period they were following a **specification**, not a standard.
 
 See [Application-UI-Standards-and-Specs.md](Application-UI-Standards-and-Specs.md) for the full details of CUA and ISO 9241.
+
+---
+
+**Last Updated:** 2026-10-15 1630 CDT

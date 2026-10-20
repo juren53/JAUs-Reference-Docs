@@ -1,5 +1,7 @@
 ## GUI Standard Battles
 
+**Date:** 2026-10-15 1955 CDT
+
 Several books, academic papers, and contemporaneous journal articles document the **1980s and 1990s GUI Standards Battles**, detailing the technical, political, and commercial friction between corporate specs (like IBM CUA), formal standards bodies (IEEE P1201 and ISO), and competing UNIX vendors.
 
 Below are the most notable references that examine this specific era and the breakdown of formal UI standardization.
@@ -97,3 +99,7 @@ The references in sections 1 and 2 came from secondary summaries and have not be
 - **Claim that vendors used IEEE voting procedures to block each other's proposals:** needs a primary source.
 - **ISO 9241-14 retrospectives** in *Interacting with Computers* and *ACM TOCHI*: find the specific articles.
 - **IEEE P1201.1 / P1201.2:** exact official titles (*Uniform Application Program Interface for GUIs*; *Recommended Practice for Graphical User Interface Drivability*), scope, and final status.
+
+---
+
+**Last Updated:** 2026-10-15 1955 CDT
