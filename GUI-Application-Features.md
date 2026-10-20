@@ -1,5 +1,7 @@
 # GUI Application Features
 
+**Date:** 2026-10-20 0506 CDT
+
 A catalog of the features a desktop GUI application is expected to have, according to the **standards** and **specifications** covered in JAUs-Reference-Docs. Each feature lists where it comes from, so it is clear whether it rests on a standard (ISO, ANSI) or on a company specification (IBM CUA, Microsoft, Apple, GNOME, KDE).
 
 For a quick definition of each named element (title bar, toolbar, menu item, etc.), jump to **§19, UI Element Glossary**.
@@ -570,3 +572,7 @@ This document builds on the companion docs. Items beyond what those docs state w
 - **IEEE P1201.2:** scope as described in the companion docs (mouse buttons, mnemonics, menu structures, accelerators); never approved, so cite only as a draft project.
 - **CUA Undo binding (Alt+Backspace)** and **Shift+F10** for pop-up menus: confirm in the CUA '91 publications.
 - **Platform specifics:** dialog button order, Redo shortcuts, Preferences locations, and GNOME's header-bar guidance change over time; check the current Microsoft, Apple, GNOME, and KDE guidelines.
+
+---
+
+**Last Updated:** 2026-10-20 0506 CDT
