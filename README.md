@@ -1,5 +1,7 @@
 # JAU's Reference Docs
 
+**Date:** 2026-10-15 1624 CDT
+
 Shared reference documents for all of my projects, especially the PyQt GUI applications in the [juren53](https://github.com/juren53) GitHub account.
 
 ## Documents
@@ -17,3 +19,7 @@ These docs keep a strict distinction:
 
 - **Standard:** published by a recognized standards body (ISO, IEC, ANSI, IEEE, ...) through an open, consensus-based process.
 - **Specification (spec):** published by a company or other non-standards organization (IBM, Microsoft, Apple, GNOME, KDE, ...). A widely used spec is still a spec, not a standard.
+
+---
+
+**Last Updated:** 2026-10-20 0456 CDT
