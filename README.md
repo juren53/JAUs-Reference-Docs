@@ -12,7 +12,7 @@ Shared reference documents for all of my projects, especially the PyQt GUI appli
 | [GUI-Standards-Battles.md](GUI-Standards-Battles.md) | History of the 1980s–1990s GUI standards battles (IBM CUA, OPEN LOOK vs. Motif, IEEE P1201, CDE, ISO 9241-14), with references, timeline, and conclusions |
 | [Application-UI-Standards-and-Specs.md](Application-UI-Standards-and-Specs.md) | Desktop application menu, dialog, and keyboard conventions: ISO/ANSI/IEEE **standards** and the IBM CUA and platform **specifications** |
 | [GUI-Application-Features.md](GUI-Application-Features.md) | Catalog of the features a desktop GUI app is expected to have (windows, menus, keyboard, dialogs, controls, messages, help), each tagged with its source standard or spec, plus PyQt implementation notes and a checklist |
-| [Synology-Git-Server.md](Synology-Git-Server.md) | Private git hosting on the Synology NAS (192.168.1.105, SSH port 222): DSM setup, everyday commands, pushing to GitHub and the NAS together, LMDE workstation setup, and troubleshooting |
+| [Synology-Git-Server.md](Synology-Git-Server.md) | Private git hosting on the Synology NAS (192.168.1.105, SSH port 222): DSM setup, everyday commands, pushing to GitHub and the NAS together, LMDE workstation setup, the Gitea web interface (port 3000), and troubleshooting |
 
 ## Terminology
 
@@ -23,4 +23,4 @@ These docs keep a strict distinction:
 
 ---
 
-**Last Updated:** 2026-10-29 1649 CDT
+**Last Updated:** 2026-10-29 1817 CDT
