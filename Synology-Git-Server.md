@@ -181,7 +181,7 @@ The LMDE workstation is set up and tested:
 - `init.defaultBranch` is `main`.
 - Tests passed: key login (`KEY_LOGIN_OK`), cloning and pushing to `test.git`, `ssh gitea` ("successfully authenticated"), and cloning `gitea:juren/hstl-hours.git`.
 
-An older `synology` alias in `~/.ssh/config` (port 222, `~/.ssh/id_rsa`) does **not** work. That key isn't in the NAS's `authorized_keys`. Use `nas` instead.
+An older `synology` alias in `~/.ssh/config` (port 222, `~/.ssh/id_rsa`) didn't work, because that key isn't in the NAS's `authorized_keys`. It was removed on 2026-10-29. Use `nas` instead. For scp, add `-O`, which DSM needs (`scp -O <file> nas:<path>`).
 
 ---
 
