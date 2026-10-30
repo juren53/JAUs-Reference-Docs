@@ -171,6 +171,18 @@ git clone nas:/volume1/git/test.git /tmp/nas-test && git -C /tmp/nas-test log --
 
 `KEY_LOGIN_OK` followed by a commit list means the workstation is ready.
 
+### Status: done (2026-10-29)
+
+The LMDE workstation is set up and tested:
+
+- `~/.ssh/config` has `nas` (port 222) and `gitea` (port 2222) entries, both using `~/.ssh/id_ed25519`. The earlier config was backed up to `~/.ssh/config.bak-20261029`.
+- The key was copied to the NAS with `ssh-copy-id nas`. It was also added in Gitea under the SSH key name **Gitea**.
+- Gitea's port-2222 host key was added to `known_hosts`.
+- `init.defaultBranch` is `main`.
+- Tests passed: key login (`KEY_LOGIN_OK`), cloning and pushing to `test.git`, `ssh gitea` ("successfully authenticated"), and cloning `gitea:juren/hstl-hours.git`.
+
+An older `synology` alias in `~/.ssh/config` (port 222, `~/.ssh/id_rsa`) does **not** work. That key isn't in the NAS's `authorized_keys`. Use `nas` instead.
+
 ---
 
 ## Gitea web interface
@@ -318,4 +330,4 @@ The backup also covers Gitea, because it all lives in `/volume1/git/gitea`: its 
 
 ---
 
-**Last Updated:** 2026-10-29 1817 CDT
+**Last Updated:** 2026-10-29 2113 CDT
